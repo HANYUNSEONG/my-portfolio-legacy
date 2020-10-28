@@ -1,6 +1,7 @@
 // import
 @import './Header.scss';
 @import './About.scss';
+@import './Skills.scss';
 
 // Setting
 ::selection {
@@ -30,4 +31,8 @@ button {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+}
+
+.clear {
+    clear: both;
 }

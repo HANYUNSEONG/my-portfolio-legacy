@@ -1,0 +1,25 @@
+#skills {
+    & h3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    & > div {
+        width: 100%;
+        .contents {
+            display: grid;
+            grid-auto-flow: column;
+            padding: 20px 0;
+            div {
+                float: left;
+                margin: 0 auto;
+                width: 130px;
+                height: 130px;
+                text-align: center;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+        }
+    }
+}

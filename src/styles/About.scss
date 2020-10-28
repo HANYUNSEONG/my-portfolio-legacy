@@ -5,15 +5,53 @@
     height: 100vh;
     background-color: #eee;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
     & > h3 {
         font-weight: 100;
         letter-spacing: -1px;
         font-size: 24px;
-        @include centerBox();
-
-        small {
-            font-size: 27px;
-            font-weight: 600;
+        margin-bottom: 10px;
+        position: relative;
+        &:after {
+            content: '';
+            width: 2px;
+            height: 80%;
+            background-color: #333;
+            position: absolute;
+            right: -5px;
+            top: 4px;
+            animation: flashCursor 0.3s infinite alternate;
         }
+    }
+
+    & p {
+        opacity: 0;
+        transform: translate(0, 120px);
+        animation: subText 2s forwards;
+        animation-delay: 4s;
+    }
+}
+
+@keyframes flashCursor {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes subText {
+    from {
+        opacity: 0;
+        transform: translate(0, 120px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
     }
 }
