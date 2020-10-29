@@ -1,5 +1,5 @@
 header {
-    max-width: 100%;
+    max-width: 1200px;
     width: 100%;
     background-color: rgba(0, 0, 0, .8);
     z-index: 9999;
@@ -9,12 +9,16 @@ header {
     top: 0;
     transform: translate(-50%, 0);
     &.on {
-        max-width: 700px;
         border-radius: 10px;
-        top: 10px;
+        top: 2%;
     }
     & > nav {
         width: 100%;
+        transition: .6s;
+        overflow: hidden;
+        &.nav_on {
+            max-height: 270px;
+        }
         ul {
             width: 100%;
             display: flex;
@@ -43,6 +47,50 @@ header {
             &:hover:after {
                 width: calc(100% - 20px);
             }
+        }
+    }
+
+    & > .ham_btn {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(0, 0, 0, .8);
+        position: absolute;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+        transition: .3s;
+        visibility: hidden;
+        border-bottom-right-radius: 10px;
+        span {
+            width: 60%;
+            height: 2px;
+            background-color: #fff;
+            display: inline-block;
+        }
+    }
+
+    & > .ham_btn_on {
+        left: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        max-width: 100px !important;
+        top: 0 !important;
+        left: 50px;
+        right: -50px;
+        &.on {
+            border-radius: 0;
+        }
+        nav {
+            max-height: 0;
+        }
+        .ham_btn {
+            visibility: initial;
         }
     }
 }

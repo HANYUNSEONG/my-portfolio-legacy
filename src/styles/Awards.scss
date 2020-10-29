@@ -1,0 +1,34 @@
+#Awards {
+    position: relative;
+    overflow: hidden;
+    background-color: #4a5974;
+    & > * {
+        color: #fff;
+    }
+    .contents {
+        grid-template-columns: 1fr;
+        div {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            letter-spacing: -.5px;
+            padding: 0 0 1rem 0;
+            border-bottom: 1px solid #eee;
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+    // &:after {
+    //     content: '';
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     z-index: -1;
+    //     transform: rotate(45deg);
+    //     background-color: powderblue;
+    // }
+}

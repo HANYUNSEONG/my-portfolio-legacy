@@ -1,25 +1,52 @@
-#skills {
+#Skills {
     & h3 {
         width: 100%;
         text-align: center;
+        font-weight: 100;
+        font-size: 23px;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
     }
 
     & > div {
         width: 100%;
+        border-bottom: 1px solid #eee;
+        &:not(:first-child) {
+            margin: 1.2rem 0;
+        }
         .contents {
-            display: grid;
-            grid-auto-flow: column;
-            padding: 20px 0;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             div {
-                float: left;
-                margin: 0 auto;
                 width: 130px;
                 height: 130px;
                 text-align: center;
-                border: 1px solid #ccc;
                 border-radius: 8px;
                 overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                box-shadow: 0 0 5px 1px #ccc;
+                &:hover img {
+                    transform: scale(1.1);
+                }
+                img {
+                    width: 100%;
+                    transition: .3s;
+                }
             }
         }
     }
 }
+
+// @media screen and (max-width: 480px) {
+//     #skills {
+//         .contents {
+//             padding: 1.2rem 1rem !important;
+//         }
+//     }
+// }
