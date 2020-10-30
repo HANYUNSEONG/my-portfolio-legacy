@@ -1,9 +1,8 @@
 #Awards {
     position: relative;
     overflow: hidden;
-    background-color: #4a5974;
     & > * {
-        color: #fff;
+        color: #000;
     }
     .contents {
         grid-template-columns: 1fr;

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TitleH3 = styled.h3`
+const TitleH2 = styled.h2`
     width: 100%;
     text-align: left;
-    letter-spacing: .5rem;
+    letter-spacing: .2rem;
     font-size: 1.5rem;
     border-bottom: 1px solid #ececec;
     padding: 1rem 0;
@@ -12,7 +12,7 @@ const TitleH3 = styled.h3`
 
 const ContentTitle = ({ children }) => {
     return (
-        <TitleH3>{children}</TitleH3>
+        <TitleH2>{children}</TitleH2>
     )
 }
 

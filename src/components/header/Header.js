@@ -16,8 +16,8 @@ const Header = ({ toggle, handleHeaderToggle }) => {
                 <ul>
                     <li onClick={(e) => scrollTargetMent('About')}>About Me</li>
                     <li onClick={(e) => scrollTargetMent('Skills')}>Skills</li>
-                    <li onClick={(e) => scrollTargetMent('Awards')}>Awards</li>
-                    <li onClick={(e) => scrollTargetMent('Info')}>Info</li>
+                    <li onClick={(e) => scrollTargetMent('Project')}>Project</li>
+                    <li onClick={(e) => scrollTargetMent('Info')}>Information</li>
                     <li onClick={(e) => scrollTargetMent('Contact')}>Contact</li>
                 </ul>
             </nav>

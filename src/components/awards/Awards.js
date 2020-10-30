@@ -7,7 +7,7 @@ const Awards = ({ awards }) => {
     return (
         <div id="Awards">
             <div className="content_wrap">
-                <ContentTitle>수상경력</ContentTitle>
+                <ContentTitle>Awards</ContentTitle>
                 <div className="contents">
                     {
                         awards && awards.map((data, idx) =>

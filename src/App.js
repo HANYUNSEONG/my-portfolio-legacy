@@ -8,20 +8,23 @@ import Header from './components/header/Header';
 import About from './components/about/About';
 import Skills from './components/skills/Skills';
 import Awards from './components/awards/Awards';
+import Info from './components/info/Info';
+import Project from './components/project/Project';
 
 // images
 import AboutBackgroundImage from './asset/images/about.jfif';
 
 // dev logos
-import htmlLogo from './asset/images/dev_logos/html.png'
-import css3Logo from './asset/images/dev_logos/css3.svg'
-import javascriptLogo from './asset/images/dev_logos/javascript.png'
-import jqueryLogo from './asset/images/dev_logos/jquery.png'
-import reactLogo from './asset/images/dev_logos/react.png'
-import nodejsLogo from './asset/images/dev_logos/nodejs.png'
-import mysqlLogo from './asset/images/dev_logos/mysql.svg'
-import oracleLogo from './asset/images/dev_logos/oracle.png'
-import gitLogo from './asset/images/dev_logos/git.png'
+import htmlLogo from './asset/images/dev_logos/html.png';
+import css3Logo from './asset/images/dev_logos/css3.svg';
+import javascriptLogo from './asset/images/dev_logos/javascript.png';
+import jqueryLogo from './asset/images/dev_logos/jquery.png';
+import reactLogo from './asset/images/dev_logos/react.png';
+import nodejsLogo from './asset/images/dev_logos/nodejs.png';
+import mysqlLogo from './asset/images/dev_logos/mysql.svg';
+import oracleLogo from './asset/images/dev_logos/oracle.png';
+import gitLogo from './asset/images/dev_logos/git.png';
+import phpLogo from './asset/images/dev_logos/php.svg';
 
 const App = () => {
     let [toggle, setToggle] = useState(false);
@@ -74,6 +77,11 @@ const App = () => {
                 name: 'Git',
                 level: 'Basic',
                 logo: gitLogo
+            },
+            {
+                name: 'PHP',
+                level: 'Basic',
+                logo: phpLogo
             }
         ]
     )
@@ -112,10 +120,25 @@ const App = () => {
 
     let [educations] = useState([
         {
-            name: '인평자동차정보고등학교',
+            name: '인평자동차정보고등학교 [졸업]',
             major: '웹콘텐츠과',
             status: '졸업',
             date: '2020.02'
+        }
+    ])
+
+    let [projects] = useState([
+        {
+            name: '김포시킥복싱협회 홈페이지',
+            date: '2019.04 - 2019.05',
+            useLanguage: 'HTML5, CSS3, JavaScript, jQuery, PHP',
+            thumbnail: ''
+        },
+        {
+            name: '코로나 마스크 맵',
+            date: '2020.02',
+            useLanguage: 'HTML5, CSS3, JavaScript, jQuery',
+            thumbnail: ''
         }
     ])
 
@@ -155,7 +178,9 @@ const App = () => {
             <Header toggle={toggle} handleHeaderToggle={handleHeaderToggle} />
             <About aboutTitle={aboutTitle} AboutBackgroundImage={AboutBackgroundImage} />
             <Skills skills={skills} levels={levels} />
-            <Awards awards={awards} />
+            {/* <Awards awards={awards} /> */}
+            <Project />
+            <Info license={license} educations={educations} awards={awards} />
         </>
     )
 }
